@@ -6,4 +6,4 @@
 function nameDeclare(){
     $("#name").replaceWith("<p>" + $("#userInputName").val() + "</p>"); 
     $(".nameInput").hide();
-};
+}; 
