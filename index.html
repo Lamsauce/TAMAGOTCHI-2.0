@@ -20,19 +20,30 @@
 </head>
 <body>
     <div class="main-content container">
-      <h1 style="font-size: 50px; letter-spacing: 5px;">Tamagotchi</h1>
+      <h1 style="font-size: 50px; letter-spacing: 5px;">- Tamagotchi -</h1>
       <div class="game" style="background-image: url('https://getwallpapers.com/wallpaper/full/3/a/1/260471.jpg'); background-size: cover;">
-       <p id="name">John Smith</p>
+
+        <!-- Pet's Name -->
+        <p id="name">What's your new pet's name?</p>
+        <div class=nameInput>
+          <input type="text" id="userInputName" placeholder="Pet's Name" onclick="nameDeclare()">
+          <button id="confirmName">Confirm</button>
+        </div>
        
-       <div class=nameInput>
-        <input type="text" id="userInputName" onclick="nameDeclare()" placeholder="Pet's Name">
-        <button id="confirmName">Confirm</button>
-       </div>
-      
+        <!-- Pet Area -->
+        <div class="petImages">
+          <img id="egg" src="./images/egg.gif"/>
+          <img id="charmander" src="./images/charmander.gif"/>
+          <img id="charmeleon" src="./images/charmeleon.gif"/>
+          <img id="charizard" src="./images/charizard.gif"/>
+          <img id="missingNo" src="./images/missingno.gif"/>
+        </div>
       </div>
+
       <div class="instructions">
         <h3>How To Play</h3>
       </div>
     </div>
 </body>
 </html>
+

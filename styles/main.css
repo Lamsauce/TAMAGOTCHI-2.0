@@ -1,3 +1,7 @@
+html {
+    background-color: rgb(255, 189, 189);
+}
+
 * {
     color: black;
     font-family: 'Staatliches', cursive;
@@ -12,4 +16,14 @@
     width: 1000px;
     height: 600px;
     border: 5px solid black;
+}
+
+.nameInput {
+    position: absolute;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
