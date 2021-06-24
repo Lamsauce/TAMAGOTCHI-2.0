@@ -1,4 +1,4 @@
-html {
+body {
     background-color: rgb(255, 189, 189);
 }
 
@@ -19,11 +19,22 @@ html {
 }
 
 .nameInput {
-    position: absolute;
-    position: absolute;
     margin-left: auto;
     margin-right: auto;
     left: 0;
     right: 0;
     text-align: center;
+    position: absolute;
+}
+
+progress {
+    margin: 20px 40px 0px 40px;
+    height: 70px;
+    width: 250px;
+}
+
+img {
+    padding-top: 80px;
+    height: 370px;
+    width: 370px;
 }

@@ -26,7 +26,7 @@
         <!-- Pet's Name -->
         <p id="name">What's your new pet's name?</p>
         <div class=nameInput>
-          <input type="text" id="userInputName" placeholder="Pet's Name" onclick="nameDeclare()">
+          <input type="text" id="userInputName" placeholder="Pet's Name" maxlength="10" onclick="nameDeclare()">
           <button id="confirmName">Confirm</button>
         </div>
        
@@ -38,12 +38,17 @@
           <img id="charizard" src="./images/charizard.gif"/>
           <img id="missingNo" src="./images/missingno.gif"/>
         </div>
+        
+        <!-- Stats -->
+        <div class="stats">
+          <progress value=5 max=10></progress>
+          <progress value=6 max=10></progress>
+          <progress value=3 max=10></progress>
+        </div>
       </div>
-
       <div class="instructions">
         <h3>How To Play</h3>
       </div>
-    </div>
 </body>
 </html>
 
