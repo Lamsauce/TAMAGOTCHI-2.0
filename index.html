@@ -24,11 +24,12 @@
       <div class="game" style="background-image: url('https://getwallpapers.com/wallpaper/full/3/a/1/260471.jpg'); background-size: cover;">
 
         <!-- Pet's Name -->
-        <p id="name">What's your new pet's name?</p>
+        <h2 id="name">What's your new pet's name?</h2>
         <div class=nameInput>
-          <input type="text" id="userInputName" placeholder="Pet's Name" maxlength="10" onclick="nameDeclare()">
-          <button id="confirmName">Confirm</button>
+          <input type="text" style="font-size: 20px" id="userInputName" placeholder="Pet's Name" maxlength="15" onclick="nameDeclare()">
+          <button style="font-size: 20px" id="confirmName">Confirm</button>
         </div>
+        <p id="age">Age: 0</p>
        
         <!-- Pet Area -->
         <div class="petImages">
@@ -38,12 +39,18 @@
           <img id="charizard" src="./images/charizard.gif"/>
           <img id="missingNo" src="./images/missingno.gif"/>
         </div>
-        
+
         <!-- Stats -->
-        <div class="stats">
-          <progress value=5 max=10></progress>
-          <progress value=6 max=10></progress>
-          <progress value=3 max=10></progress>
+        <div class="allStats container">
+          <div class="stat-container">
+            <div class="skills hunger">Hunger</div>
+          </div>
+          <div class="stat-container">
+            <div class="skills energy">Energy</div>
+          </div>
+          <div class="stat-container">
+            <div class="skills entertainment">Entertainment</div>
+          </div>
         </div>
       </div>
       <div class="instructions">
