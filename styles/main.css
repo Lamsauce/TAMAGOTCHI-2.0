@@ -14,9 +14,13 @@ p{
 
 h2 {
     font-size: 35px;
-    color: white;
+    color: #ff80aa;
     font-weight: 100;
     margin-bottom: 0px;
+    text-shadow: -2px 2px 2px #000,
+                  2px 2px 2px #000,
+                  2px -2px 0 #000,
+                  -2px -2px 0 #000;
 }
 
 .container {
@@ -51,7 +55,7 @@ img {
   background-color: #ddd; 
   border: black 5px solid;
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -62,6 +66,7 @@ img {
   padding-top: 10px;
   padding-bottom: 10px; 
   color: black;
+  float: left;
 }
 
 .hunger {
@@ -77,6 +82,19 @@ img {
     background-color: #57ff2d;
 } 
 
-#hunger{
-    text-align: center;;
+.stat-title {
+    margin-top: 15px;
+    position: absolute;
+    color: #ff80aa;
+    text-shadow: -2px 2px 2px #000,
+				  2px 2px 2px #000,
+				  2px -2px 0 #000,
+				  -2px -2px 0 #000;
+}
+
+.care-button {
+    position: absolute;
+    margin-top: 30px;
+    font-size: 20px;
+    margin-left: -50px;
 }
