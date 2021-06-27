@@ -75,14 +75,14 @@ const decreaseHunger = function decreaseHunger() {
 const decreaseEnergy = function decreaseEnergy() {
     if (energy > 0){
         energy--;
-        $("#energy").text(`Energy: ${energy}/10`);
+        $(".energy").css("width", "-=10%");
     }
 };
 
 const decreaseEntertainment = function decreaseEntertainment() {
     if(entertainment > 0) {
         entertainment--;
-        $("#entertainment").text(`Entertainment: ${entertainment}/10`);
+        $(".entertainment").css("width", "-=10%");
     }
 };
 
@@ -140,7 +140,7 @@ const timerCountdown = function timerCountdown(){
 // Fix HUNGER word from moving
 // Change color of bar when decreasing
 // Animate sprites
-// Deplete bar for energy + entertainment
+// Button moves with stat bar for no reason
 
 // Add increase function
 

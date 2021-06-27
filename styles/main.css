@@ -98,3 +98,30 @@ img {
     font-size: 20px;
     margin-left: -50px;
 }
+
+button {
+    color: black;
+    background-color: #69afca;
+    border: solid black 3px;
+    transition: all .1s ease-in-out; 
+    border-radius: 10px;
+}
+
+button:hover {
+    transform: scale(1.08) ;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.static {
+    animation-name: pulse;
+    animation-duration: 1500ms;
+    transform-origin:70% 70%;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
