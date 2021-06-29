@@ -28,13 +28,11 @@ function nameDeclare(){
 /* ======== Increase stats ======== */
 let hunger = 10;
 const increaseHunger = function increaseHunger(){
-  $("#hungerButton").on("click", function(event){
-  if(hunger < 10) {
-    hunger++;
-    $("#hunger").text(`Hunger: ${hunger}/10`);
-    console.log("Feed!", hunger);
-  } else {
-    console.log(`It doesn't want to eat right now...`)
+  $("#hungerButton").on("click", function(event){      
+    if(hunger < 10) {
+      hunger = 10;
+      $(".hunger").css("width", "100%");
+      $(".hunger").css("background-color", "#57ff2d");
     }
   });
 };
@@ -43,11 +41,9 @@ let energy=10;
 const increaseEnergy = function increaseEnergy() {
   $("#energyButton").on("click", function(event){      
   if(energy < 10) {
-    energy++;
-    $("#energy").text(`Energy ${energy}/10`);
-    console.log("Sleep!", energy);
-  } else {
-    console.log(`It has too much energy!`)
+    energy = 10;
+    $(".energy").css("width", "100%");
+    $(".energy").css("background-color", "#57ff2d");
     }
   })
 };
@@ -56,10 +52,9 @@ let entertainment=10;
 const increaseEntertainment = function increaseEntertainment(){
     $("#entertainmentButton").on("click", function(event){
     if(entertainment < 10) {
-      entertainment++;
-      console.log("Play!", entertainment);
-    } else {
-      console.log(`It seems to be enjoying itself!`);
+      entertainment = 10;
+      $(".entertainment").css("width", "100%");
+      $(".entertainment").css("background-color", "#57ff2d");
     }
   })
 };
@@ -67,23 +62,41 @@ const increaseEntertainment = function increaseEntertainment(){
 /* ======== Decrease stats ========*/
 const decreaseHunger = function decreaseHunger() {
   if (hunger > 0){
-      hunger--;
-      $(".hunger").css("width", "-=10%");
+    hunger--;
+    $(".hunger").css("width", "-=10%");
+  if (hunger > 1 && hunger <= 5){
+      $(".hunger").css("background-color", "#d8b51b");
+    }
+    else if (hunger == 1){
+      $(".hunger").css("background-color", "red");
+    }
   }
 };
 
 const decreaseEnergy = function decreaseEnergy() {
-    if (energy > 0){
-        energy--;
-        $(".energy").css("width", "-=10%");
+  if (energy > 0){
+    energy--;
+    $(".energy").css("width", "-=10%");
+    if (energy > 1 && energy <= 5){
+      $(".energy").css("background-color", "#d8b51b");
     }
+    else if (energy == 1){
+      $(".energy").css("background-color", "red");
+    }
+  }
 };
 
 const decreaseEntertainment = function decreaseEntertainment() {
-    if(entertainment > 0) {
-        entertainment--;
-        $(".entertainment").css("width", "-=10%");
+  if(entertainment > 0) {
+    entertainment--;
+    $(".entertainment").css("width", "-=10%");
+    if (entertainment > 1 && entertainment <= 5){
+      $(".entertainment").css("background-color", "#d8b51b");
     }
+    else if (entertainment == 1){
+      $(".enteratinment").css("background-color", "red");
+    }
+  }
 };
 
 /* ======== Age ======== */
@@ -132,15 +145,7 @@ const timerCountdown = function timerCountdown(){
     const timer = setInterval(resetTime, 1000);
 };
 
-//Life Status
-  //Green = 7+ Value
-  //Yellow = 4-6
-  //Red = 1-3
-
-// Fix HUNGER word from moving
-// Change color of bar when decreasing
 // Animate sprites
-// Button moves with stat bar for no reason
 
 // Add increase function
 
