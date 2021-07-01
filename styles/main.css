@@ -16,6 +16,7 @@ h2 {
     font-size: 35px;
     color: #ff80aa;
     font-weight: 100;
+    margin-top: 10px;
     margin-bottom: 0px;
     text-shadow: -2px 2px 2px #000,
                   2px 2px 2px #000,
@@ -44,7 +45,7 @@ h2 {
 }
 
 img {
-    margin-top: 120px;
+    margin-top: 105px;
     height: 300px;
     width: 300px;
 }
@@ -130,6 +131,6 @@ button:hover {
 }
 
 .accordion-button {
-    color: gray;
     font-size: 30px;
 }
+
