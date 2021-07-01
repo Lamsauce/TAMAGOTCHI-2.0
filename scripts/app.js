@@ -67,9 +67,12 @@ const decreaseHunger = function decreaseHunger() {
   if (hunger > 1 && hunger <= 5){
       $(".hunger").css("background-color", "#d8b51b");
     }
-    else if (hunger == 1){
-      $(".hunger").css("background-color", "red");
-    }
+  else if (hunger == 1){
+    $(".hunger").css("background-color", "red");
+    } 
+  else if (hunger == 0) {
+    gameOver();
+  }
   }
 };
 
@@ -102,16 +105,16 @@ const decreaseEntertainment = function decreaseEntertainment() {
 /* ======== Age ======== */
 let age = 0;
 const ageTime = function ageTime() {
-    if (age >= 1 && age <= 12){
+    if (age >= 1 && age <= 8){
         time = 30;
         $("#egg").hide();
         $("#charmander").show();
-    } else if (age >= 13 && age <= 17){
-        time = 90;
+    } else if (age >= 9 && age <= 19){
+        time = 30;
         $("#charmander").hide();
         $("#charmeleon").show();
-    } else if (age >= 18){
-        time = 90;
+    } else if (age >= 20){
+        time = 30;
         $("#charmeleon").hide();
         $("#charizard").show();
     }
@@ -145,6 +148,18 @@ const timerCountdown = function timerCountdown(){
     const timer = setInterval(resetTime, 1000);
 };
 
+const gameOver = function gameOver() {
+  $("#egg").hide();
+  $("#charmander").hide();
+  $("#charmeleon").hide();
+  $("#charizard").hide();
+  $("#missingNo").show();
+  
+  $("#hungerButton").attr("disabled", true);
+  $("#energyButton").attr("disabled",true);
+  $("#entertainmentButton").attr("disabled",true);
+}
+
 // Animate sprites
 
 // Add increase function
@@ -153,7 +168,5 @@ const timerCountdown = function timerCountdown(){
 
 //Add interaction animation like eating and entertainment
   //Hungy --> feed --> Give food animation
-
-
 
 //ICEBOX: Money system with bonus and buying items

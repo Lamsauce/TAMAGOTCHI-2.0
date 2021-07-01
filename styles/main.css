@@ -44,7 +44,7 @@ h2 {
 }
 
 img {
-    padding-top: 105px;
+    margin-top: 120px;
     height: 300px;
     width: 300px;
 }
@@ -92,6 +92,10 @@ img {
 				  -2px -2px 0 #000;
 }
 
+#confirmName:hover {
+    transform: scale(1.08);
+}
+
 .care-button {
     position: absolute;
     margin-top: 50px;
@@ -108,7 +112,6 @@ button {
 }
 
 button:hover {
-    transform: scale(1.08) ;
     cursor: pointer;
 }
 
@@ -124,4 +127,9 @@ button:hover {
     transform-origin:70% 70%;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+}
+
+.accordion-button {
+    color: gray;
+    font-size: 30px;
 }
