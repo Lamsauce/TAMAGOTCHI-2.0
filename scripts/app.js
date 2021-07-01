@@ -5,6 +5,7 @@ $("#charizard").hide();
 $("#missingNo").hide();
 
 /* replaces name ID, allow user to change name w/ enter keybind*/
+
 function nameDeclare(){
     $("#confirmName").on("click", function(event){
     $("#name").replaceWith("<h2>" + $("#userInputName").val() + "</h2>"); 
@@ -118,7 +119,7 @@ const ageTime = function ageTime() {
         $("#charmeleon").hide();
         $("#charizard").show();
     }
-    timerCountdown();
+      timerCountdown();
 };
 
 /* ======== Timer ======== */
@@ -127,14 +128,18 @@ const timerCountdown = function timerCountdown(){
     const resetTime = function resetTime() {
     console.log(time);
     time--;
-    if (time <= 0) {
+    if (time <= 0  && (hunger > 0 && energy > 0 && entertainment > 0)) {
         clearInterval(timer);
         age++;
         $("#age").text(`Age: ${age}`);
-        if (age > 0) {
-            ageTime();
-        }
-    } 
+        if (age > 0 && (hunger > 0 && energy > 0 && entertainment > 0)) {
+          ageTime();
+        } 
+    }
+    else if (time <= 0) {
+        clearInterval(timer);
+      }
+    
     if (time % 15 == 0){
         decreaseHunger();
     } 
@@ -149,6 +154,10 @@ const timerCountdown = function timerCountdown(){
 };
 
 const gameOver = function gameOver() {
+  let endCard= $("<p>/</p>").text("Game Over!");
+  $(endCard).attr("class", "endCard");
+  $(".gameHeading").append(endCard);
+
   $("#egg").hide();
   $("#charmander").hide();
   $("#charmeleon").hide();
