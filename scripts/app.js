@@ -8,21 +8,21 @@ $(".restartGame").hide();
 /* replaces name ID, allow user to change name w/ enter keybind*/
 
 function nameDeclare(){
-    $("#confirmName").on("click", function(event){
+  $("#confirmName").on("click", function(event){
+  $("#name").replaceWith("<h2>" + $("#userInputName").val() + "</h2>"); 
+  $(".nameInput").hide();
+  timerCountdown();
+  })
+    
+  $('#userInputName').bind("enterKey",function(e){
+  });
+
+  $('#userInputName').keyup(function(e){
+  if(e.keyCode == 13) {
+    $(this).trigger("enterKey");
     $("#name").replaceWith("<h2>" + $("#userInputName").val() + "</h2>"); 
     $(".nameInput").hide();
     timerCountdown();
-    })
-    
-    $('#userInputName').bind("enterKey",function(e){
-    });
-
-    $('#userInputName').keyup(function(e){
-    if(e.keyCode == 13) {
-        $(this).trigger("enterKey");
-        $("#name").replaceWith("<h2>" + $("#userInputName").val() + "</h2>"); 
-        $(".nameInput").hide();
-        timerCountdown();
     }
   })
 }; 
@@ -88,6 +88,9 @@ const decreaseEnergy = function decreaseEnergy() {
     else if (energy == 1){
       $(".energy").css("background-color", "red");
     }
+    else if (energy == 0) {
+      gameOver();
+    }
   }
 };
 
@@ -100,6 +103,9 @@ const decreaseEntertainment = function decreaseEntertainment() {
     }
     else if (entertainment == 1){
       $(".enteratinment").css("background-color", "red");
+    }
+    else if (entertainment == 0) {
+      gameOver();
     }
   }
 };

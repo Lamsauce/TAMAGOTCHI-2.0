@@ -53,18 +53,22 @@ h2 {
 #charmander {
     height: 250px;
     width: 250px;
-    margin-top: 150px;
+    margin-top: 155px;
 }
 
 #charmeleon {
     height: 280px;
     width: 280px;
-    margin-top: 120px;
+    margin-top: 125px;
     margin-left: 90px;
 }
 
 #charizard {
-    margin-top: -50px;
+    margin-top: -47px;
+}
+
+#missingNo {
+    margin-top: 120px;
 }
 
 /* Container for skill bars */

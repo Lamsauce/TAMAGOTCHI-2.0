@@ -33,7 +33,7 @@
         <div class="gameHeading">
           <h2 id="name">What's your new pet's name?</h2>
           <div class=nameInput>
-            <input type="text" style="font-size: 20px" id="userInputName" placeholder="Pet's Name" maxlength="15" onclick="nameDeclare()">
+            <input type="text" style="font-size: 20px" id="userInputName" placeholder="Pet's Name" minlength="1" maxlength="15" onclick="nameDeclare()" required />
             <button style="font-size: 20px" id="confirmName">Confirm</button>
           </div>
           <p id="age" style="font-size: 25px;">Age: 0</p>
