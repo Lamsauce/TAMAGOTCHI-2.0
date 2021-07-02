@@ -3,6 +3,7 @@ $("#charmander").hide();
 $("#charmeleon").hide();
 $("#charizard").hide();
 $("#missingNo").hide();
+$(".restartGame").hide();
 
 /* replaces name ID, allow user to change name w/ enter keybind*/
 
@@ -140,13 +141,13 @@ const timerCountdown = function timerCountdown(){
         clearInterval(timer);
       }
     
-    if (time % 15 == 0){
+    if (time % 16 == 0 || time % 21 == 0){
         decreaseHunger();
     } 
-    if (time % 24 == 0){
+    if (time % 15 == 0){
         decreaseEnergy();
     }
-    if (time % 28 == 0){
+    if (time % 20 == 0){
         decreaseEntertainment();
     }
   };
@@ -157,6 +158,7 @@ const gameOver = function gameOver() {
   let endCard= $("<p>/</p>").text("Game Over!");
   $(endCard).attr("class", "endCard");
   $(".gameHeading").append(endCard);
+  $(".restartGame").show();
 
   $("#egg").hide();
   $("#charmander").hide();
@@ -167,6 +169,10 @@ const gameOver = function gameOver() {
   $("#hungerButton").attr("disabled", true);
   $("#energyButton").attr("disabled",true);
   $("#entertainmentButton").attr("disabled",true);
+}
+
+const restart = function restart(){
+  location.reload();
 }
 
 // Animate sprites
